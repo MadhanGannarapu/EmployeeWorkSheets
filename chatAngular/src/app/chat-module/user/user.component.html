@@ -1,0 +1,302 @@
+<div class="container">
+  <!-- <h1>Employee working!</h1>
+ -->
+
+  <!-- 
+  <input type="file" name="image" id="image" (change)="myUploader($event)" class="form-control" [(ngModel)]="image">
+  <button class="btn btn-primary" (click)="fileUpload()">fileUpload</button>
+  <br> <br> <br>
+
+  <table class="table">
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Id</th>
+      <th>Date of Birth</th>
+      <th>Role</th>
+      <th>Mail</th>
+      <th>Address</th>
+      <th>PAN number</th>
+      <th>PF number</th>
+
+    </tr>
+    <tr *ngFor="let d of user">
+      <td>
+        <img src="{{d.image}}" style="width:50px; height:50px">
+      </td>
+      <td>{{d.emp_name}}</td>
+      <td>{{d.emp_id}}</td>
+      <td>{{d.emp_dob}}</td>
+      <td>{{d.emp_role}}</td>
+      <td>{{d.emp_mail}}</td>
+      <td>{{d.emp_address}}</td>
+      <td>{{d.emp_pan_number}}</td>
+      <td>{{d.emp_pf_number}}</td>
+    </tr>
+  </table>
+</div> -->
+
+  <!-- --- -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+
+  <div class="container emp-profile">
+    <form method="post" *ngFor="let d of user">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-img">
+            <img src="{{d.image}}" alt="" />
+            <!-- <div class="file btn btn-lg btn-primary">
+            Change Photo
+            <input type="file" name="file" />
+          </div> -->
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="profile-head">
+            <h5>
+              {{d.emp_name}}
+            </h5>
+            <h6>
+              {{d.emp_role}}&nbsp; {{d.emp_id}}
+            </h6>
+            <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                  aria-controls="profile" aria-selected="false">Timeline</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" (click)="getAdmins()" href="#Request" role="tab"
+                  aria-controls="profile" aria-selected="false">Request</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Links" role="tab" aria-controls="profile"
+                  aria-selected="false">Links</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Request Links" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-work">
+            <p>WORK LINK</p>
+            <a href="">Website Link</a><br />
+            <a href="">Bootsnipp Profile</a><br />
+            <a href="">Bootply Profile</a>
+            <p>SKILLS</p>
+            <a href="">Web Designer</a><br />
+            <a href="">Web Developer</a><br />
+            <a href="">WordPress</a><br />
+            <a href="">WooCommerce</a><br />
+            <a href="">PHP, .Net</a><br />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="tab-content profile-tab" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Employee Id</label>
+                </div>
+                <div class="col-md-6">
+                  <p>{{d.emp_id}}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Name</label>
+                </div>
+                <div class="col-md-6">
+                  <p>{{d.emp_name}}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Email</label>
+                </div>
+                <div class="col-md-6">
+                  <p>{{d.emp_mail}}</p>
+                </div>
+              </div>
+              <!-- <div class="row">
+              <div class="col-md-6">
+                <label>Phone</label>
+              </div>
+              <div class="col-md-6">
+                <p>123 456 7890</p>
+              </div>
+            </div> -->
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Profession</label>
+                </div>
+                <div class="col-md-6">
+                  <p>{{d.emp_role}}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Date of Birth</label>
+                </div>
+                <div class="col-md-6">
+                  <p>{{d.emp_dob }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Address</label>
+                </div>
+                <div class="col-md-6">
+                  <p>{{d.emp_address}}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>PAN card</label>
+                </div>
+                <div class="col-md-6">
+                  <p>{{d.emp_pan_number}}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>PF number</label>
+                </div>
+                <div class="col-md-6">
+                  <p>{{d.emp_pf_number}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Experience</label>
+                </div>
+                <div class="col-md-6">
+                  <p>Expert</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Hourly Rate</label>
+                </div>
+                <div class="col-md-6">
+                  <p>10$/hr</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Total Projects</label>
+                </div>
+                <div class="col-md-6">
+                  <p>230</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>English Level</label>
+                </div>
+                <div class="col-md-6">
+                  <p>Expert</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Availability</label>
+                </div>
+                <div class="col-md-6">
+                  <p>6 months</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <label>Your Bio</label><br />
+                  <p>Your detail description</p>
+                </div>
+              </div>
+            </div>
+            <!-- request -->
+
+            <div class="tab-pane fade" id="Request" role="tabpanel" aria-labelledby="profile-tab">
+              <div *ngIf="userRole != 'admin' ">
+                <div class="row" *ngFor="let d of adminsList">
+                  <div class="col">
+                    <p>{{d.emp_name}}</p>
+                  </div>
+                  <div class="col"><button class="btn btn-primary" (click)="request(d.emp_id)">Request</button></div>
+                </div>
+              </div>
+
+              <br>
+              <div class="row" *ngFor="let d of reqUsers">
+                <div class="col">
+                  <p>{{d.reqfrom}}</p>
+                </div>
+                <div class="col">
+                  <p>{{d.reqto}}</p>
+                </div>
+                <div class="col"><a class="btn btn-primary" [routerLink]="['link/',d.reqfrom]">send Links</a>
+                </div>
+              </div>
+
+            </div>
+            <!-- Links -->
+            <!-- {{LinksData | json}} -->
+            <div class="tab-pane fade" id="Links" role="tabpanel" aria-labelledby="profile-tab">
+
+              <div class="row" *ngFor="let d of LinksData">
+                <div class="col">
+                  <p> <a (click)="openInNewWindow(d.linkname)">{{d.linkname}}</a> </p>
+                </div>
+                <div class="col">
+                  <input type="number" style="width:100px" #res class="form-control">
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary" (click)="workDone(d.linkid,res.value)">Submit</button>
+                </div>
+
+              </div>
+
+
+              <!-- --- results --- -->
+              <div class="row">
+                <div class="col"><b>Employee</b></div>
+                <div class="col"><b>Link</b></div>
+                <div class="col"><b>Work Done</b></div>
+              </div>
+              <br>
+              <div class="row" *ngFor="let d of linksResults">
+                <div class="col">
+                  <p> {{d.linkto}} </p>
+                </div>
+                <div class="col">
+                  <p> {{d.linkname}} </p>
+                </div>
+                <div class="col">
+                  <p> {{d.linkwork}} </p>
+                </div>
+                <!-- <div class="col">
+                  <input type="number" style="width:100px" #res class="form-control">
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary" (click)="workDone(d.linkid,res.value)">Submit</button>
+                </div> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>

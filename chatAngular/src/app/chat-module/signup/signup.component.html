@@ -1,0 +1,90 @@
+<div class="wrapper fadeInDown" *ngIf="checkData !='Sucessfull' && checkData !='failed' ">
+  <div id="formContent">
+    <br>
+    <h1>Register here</h1>
+    <br>
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" id="id" class="fadeIn second" name="empId" [(ngModel)]="userObj.empId"
+            placeholder="Enter your Employee id">
+        </div>
+        <div class="col">
+          <input type="text" id="empName" class="fadeIn second" name="empName" [(ngModel)]="userObj.empName"
+            placeholder="Enter your name">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <input type="text" id="id" class="fadeIn second" name="empRole" [(ngModel)]="userObj.empRole"
+            placeholder="Enter your Role">
+        </div>
+        <div class="col">
+          <input type="text" id="empMail" class="fadeIn second" name="empMail" [(ngModel)]="userObj.empMail"
+            placeholder="Enter your Mail id">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="date" id="empDob" class="fadeIn second" name="empDob" [(ngModel)]="userObj.empDob"
+            placeholder="Enter your Date of Birth">
+        </div>
+        <div class="col">
+          <input type="text" id="empAddress" class="fadeIn second" name="empAddress" [(ngModel)]="userObj.empAddress"
+            placeholder="Enter your Address">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" id="empPanNumber" class="fadeIn second" name="empPanNumber"
+            [(ngModel)]="userObj.empPanNumber" placeholder="Enter your PAN number">
+        </div>
+        <div class="col">
+          <input type="text" id="empPfNumber" class="fadeIn second" name="empPfNumber" [(ngModel)]="userObj.empPfNumber"
+            placeholder="Enter your PF account number">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" id="password" class="fadeIn third" name="password" [(ngModel)]="userObj.password"
+            placeholder="Enter your password">
+        </div>
+        <div class="col">
+          <input type="text" id="confirmpassword" class="fadeIn third" name="confirmpassword"
+            [(ngModel)]="userObj.confirmpassword" placeholder="Confirm Your Password">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label><b> Choose your photo :</b> </label>
+        </div>
+        <div class="col">
+          <input type="file" class="fadeIn third" name="image" id="image" (change)="myUploader($event)"
+            class="form-control" [(ngModel)]="image">
+          <!-- <button class="btn btn-primary" (click)="fileUpload()"> -->
+        </div>
+      </div>
+      <input type="submit" (click)="register()" class="fadeIn fourth" value="Log In">
+    </form>
+  </div>
+</div>
+
+
+
+<div class="container" *ngIf="checkData=='Sucessfull'">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <br>
+      <h1 style="color: lightgreen">Login Sucessfull</h1>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="checkData=='failed'">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <br>
+      <h1 style="color: lightgreen">Login failed</h1>
+    </div>
+  </div>
+</div>

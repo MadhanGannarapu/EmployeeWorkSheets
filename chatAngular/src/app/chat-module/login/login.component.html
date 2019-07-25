@@ -1,0 +1,58 @@
+<!-- 
+   Refference links
+ 1. https://bootsnipp.com/snippets/dldxB
+ 2. https://codingblast.com/chat-application-angular-socket-io/
+
+ -->
+
+<div class="wrapper fadeInDown" *ngIf="loginFailed!=''">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <!-- <div class="fadeIn first">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    </div> -->
+
+    <!-- Login Form -->
+
+    <br>
+    <h1>Login here</h1>
+    <br>
+    <form>
+      <input type="text" id="id" class="fadeIn second" name="id" [(ngModel)]="id" placeholder="your id">
+
+      <input type="text" id="password" class="fadeIn third" name="password" [(ngModel)]="password"
+        placeholder=" password">
+      <input type="submit" (click)="login()" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <!-- <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div> -->
+
+  </div>
+</div>
+
+
+<div class="container" *ngIf="loginFailed==''">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <br>
+      <div>
+        <h1 style="color: lightcoral">Login Failed!</h1>
+        <p>There might be a problem of</p>
+        <ol>
+          <li>Some required information is missing or incomplete. Please correct your entries and try again.</li>
+          <li>There is no users with the data you given in our database</li>
+        </ol>
+        <p>If its 2<sup>nd</sup> option then click here to <button class="btn btn-primary"
+            (click)="redirect()">Register</button>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+</div>

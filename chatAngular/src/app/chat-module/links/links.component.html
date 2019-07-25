@@ -1,0 +1,13 @@
+
+<div class="container">
+  <label for="">Enter the number of links : </label>&nbsp;
+  <input type="text" #generate name="name">&nbsp;
+  <button (click)="Generate(generate)">Generate</button>&nbsp;
+  <br> <br>
+  <div *ngFor="let stdm of userStudentList; let i=index;">
+    <label>Link no {{i+1}}: </label> &nbsp;
+    <input type="text" name="ColumnName" #ColumnName (change)="columnName(ColumnName,i)"> &nbsp;
+  </div>
+  <br>
+  <button (click)="Links()">Send</button>
+</div>

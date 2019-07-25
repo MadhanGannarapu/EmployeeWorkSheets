@@ -1,0 +1,298 @@
+.container {
+  background-image: url("E:\practice\chatApplication\chatAngular\src\assets\whatsappDefaultImage.png");
+}
+
+
+
+/* ////////////////////////////////////////////////// */
+
+body { padding-top:30px; }
+.widget .panel-body { padding:0px; }
+.widget .list-group { margin-bottom: 0; }
+.widget .panel-title { display:inline }
+.widget .label-info { float: right; }
+.widget li.list-group-item {border-radius: 0;border: 0;border-top: 1px solid #ddd;}
+.widget li.list-group-item:hover { background-color: rgba(86,61,124,.1); }
+.widget .mic-info { color: #666666;font-size: 14px; }
+.widget .action { margin-top:5px; }
+.widget .comment-text { font-size: 12px; }
+.widget .btn-block { border-top-left-radius:0px;border-top-right-radius:0px; }
+
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+body{margin-top:20px;}
+.fa-fw {width: 2em;}
+
+.nav-pills{
+    font-size: 18px;
+}
+
+
+
+body { padding-top:20px; }
+.panel-body .btn:not(.btn-block) { width:220px;margin-bottom:15px; }
+.btn.btn-lg{
+    font-size: 14px;
+}
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+
+.navbar .dropdown-menu a:hover {
+    color: #616161 !important;
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+.navbar.navbar-dark .breadcrumb .nav-item .nav-link, .navbar.navbar-dark .navbar-nav .nav-item .nav-link{
+    font-size: 20px;
+    padding: 10px
+} */
+#banner {
+    background: url(https://bootstrapmade.com/demo/themes/Medilab/img/bg-banner.jpg) no-repeat fixed;
+    background-size: cover;
+    min-height: 650px;
+    position: relative;
+}
+.bg-color {
+    background-color: RGBA(13, 70, 83, 0.78);
+    min-height: 650px;
+}
+.navbar {
+    border-radius: 0px;
+}
+.navbar-default {
+    background-color: transparent;
+    border: 0px;
+}
+.navbar-default {
+    padding: 20px 0;
+    transition: all 0.3s;
+}
+.banner-info {
+    padding-top: 190px;
+}
+
+
+.image-aboutus-banner {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("https://images.pexels.com/photos/673649/pexels-photo-673649.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 110px;
+    padding-bottom:110px;
+    height: 800px;
+    margin:-15px;
+ }
+ 
+  .image-aboutus-sm-banner {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("https://images.pexels.com/photos/631008/pexels-photo-631008.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom:20px;
+ }
+.lg-text {
+    font-size:52px;
+    font-weight: 600;
+    text-transform: none;
+    color:#fff;
+}
+.image-aboutus-sm-banner p {
+    color:#fff;
+}
+
+
+.jumbotron {
+background: #358CCE;
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+.h1 small {
+font-size: 24px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+body{font-family:'Nanum Gothic', sans-serif;
+	font-size:14px;
+	color:#777;
+	height: 600px;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+	
+	
+	a{
+		color:#777;
+	}
+	a:hover{
+		color:#f39305;
+		text-decoration:none;
+		}
+.text-center{text-align:center;}
+.banner-heading{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 75px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 30px;
+	color:#fff;
+}
+.banner-sub-heading{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+	color:#fff;
+}
+.btn-warning{background-color:#eca439;}
+.btn-warning:hover{background-color:#f39305;}
+.mybtn{
+	border-radius:0; 
+	height:30px;
+	margin:10px auto;
+	line-height:10px;
+}
+.form-control{
+	color:#d1d1d1;
+	font-size:14px;
+	font-weight:400;
+	border-bottom:2px solid #f39305;
+	border-top:0;
+	border-left:0;
+	border-right:0;
+	height:30px;
+}
+.form-check-input{
+	background-color:#fff !important;
+	border-radius:50% !important;
+	border:2px solid #f39305 !important;
+}
+.modal-content{
+	width:400px;
+	margin:auto;
+}
+
+.modal-header {
+    padding:0.7rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+   border-radius:0;
+	background-color:#9a4a05;
+}
+.modal-title{
+	font-size:16px;
+	font-family: 'Nanum Gothic', sans-serif;
+	text-transform:uppercase;
+	color:#fff;
+	text-align:center;
+	}
+.modal-body{
+	background-image:url('http://snippetimg.meditialabs.com/bgs/bg1.jpg');
+	background-position:top left;
+	background-size:cover;
+	width:100%;
+	padding:1.5rem 3rem 3rem 3rem;
+}
+body.modal-open .supreme-container{
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}
+.text-intro{
+	font-size:0.8em;
+	color:#777;
+	text-align:center;
+}
+.form-div{
+	background-color:#fff;
+	padding:2em 1.5em;
+	box-shadow:2px 2px 2px 2px rgba(215,215,215,0.5);
+}
+form{
+	border:0 !important;
+}
+@media (max-width:500px){
+	.modal-content{
+	width:330px;
+	margin:auto;
+}
+.banner-heading{
+	font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.banner-sub-heading{
+	font-size: 10px;
+    font-weight: 200;
+    line-height: 10px;
+    margin-bottom: 40px;
+}
+}
+@media (max-width:768px){
+	.banner-text{
+	padding:150px 0 150px 0;
+}
+	.banner-sub-heading{
+	font-size: 23px;
+    font-weight: 200;
+    line-height: 23px;
+    margin-bottom: 40px;
+}
+}
+
+/* /////////////////////////// EMPLOYEE /////////////////////////// */

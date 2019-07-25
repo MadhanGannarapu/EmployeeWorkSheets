@@ -1,0 +1,249 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
+<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+
+<div class="row" *ngIf="route=='/chat/admin'">
+  <div class="col-lg-12" *ngFor="let d of user">
+    <div class="col-lg-3">
+      <ul class="nav nav-pills nav-stacked">
+        <!-- <li class="active"><a href="#"><i class="fa fa-home fa-fw"></i>Admin</a></li> -->
+        <br>
+        <img src="{{d.image}}" class="img-circle img-responsive" style="height: 200px;width: 200px;" alt="" />
+        <br>
+
+        <li><a (click)="profile()"><i class="fa fa-file-o fa-fw">
+
+            </i >{{d.emp_name}}</a></li>
+
+        <!-- <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-calendar fa-fw"></i>Calender</a></li> -->
+        <!-- <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-book fa-fw"></i>Library</a></li> -->
+        <!-- <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-pencil fa-fw"></i>Applications</a></li> -->
+        <!-- <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-cogs fa-fw"></i>Settings</a></li> -->
+      </ul>
+
+    </div>
+    <div class="col-lg-9">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span class="glyphicon glyphicon-bookmark"></span> Quick Shortcuts</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <a href="#" class="btn btn-danger btn-lg" role="button"><span class="glyphicon glyphicon-list-alt"></span>
+                <br />Apps</a>
+              <a href="#" class="btn btn-warning btn-lg" role="button"><span
+                  class="glyphicon glyphicon-bookmark"></span> <br />Bookmarks</a>
+            </div>
+            <div class="col-xs-6 col-md-6">
+
+
+              <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-signal"></span>
+                <br />Reports</a>
+              <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-comment"></span>
+                <br />Comments</a>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class=" col-md-6">
+              <a href="#" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-user"></span>
+                <br />Users</a>
+              <a href="#" class="btn btn-info btn-lg" role="button"><span class="glyphicon glyphicon-file"></span>
+                <br />Notes</a>
+            </div>
+            <div class="col-xs-6 col-md-6">
+
+              <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-picture"></span>
+                <br />Photos</a>
+              <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-tag"></span>
+                <br />Tags</a>
+            </div>
+          </div>
+          <a href="http://www.jquery2dotnet.com/" class="btn btn-success btn-lg btn-block" role="button"><span
+              class="glyphicon glyphicon-globe"></span> Website</a>
+        </div>
+      </div>
+
+      <div class="panel panel-default widget">
+        <div class="panel-heading">
+          <span class="glyphicon glyphicon-comment"></span>
+          <h3 class="panel-title">
+            Employee's List</h3>
+          <!-- <span class="label label-info">
+            78</span> -->
+        </div>
+        <div class="panel-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let d of allUsers">
+              <div class="row">
+                <div class="col-xs-2 col-md-1">
+                  <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                <div class="col-xs-10 col-md-11">
+                  <div>
+                    <h3>{{d.emp_name}}</h3>
+                    <div class="mic-info">
+                      Employee id: <a href="#">{{d.emp_id}}</a>
+                    </div>
+                  </div>
+                  <div class="comment-text">
+                    {{d.emp_mail}}
+                  </div>
+
+                  <button type="button" class="btn btn-primary btn-lg" title="readmore">readmore
+
+                  </button>
+
+
+
+
+
+
+
+                  <div class="action">
+                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-xs" title="Approved">
+                      <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                      <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- <li class="list-group-item">
+              <div class="row">
+                <div class="col-xs-2 col-md-1">
+                  <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                <div class="col-xs-10 col-md-11">
+                  <div>
+                    <a href="http://bootsnipp.com/BhaumikPatel/snippets/Obgj">Admin Panel Quick Shortcuts</a>
+                    <div class="mic-info">
+                      By: <a href="#">Bhaumik Patel</a> on 11 Nov 2013
+                    </div>
+                  </div>
+                  <div class="comment-text">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+                  </div>
+                  <div class="action">
+                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-xs" title="Approved">
+                      <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                      <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+            <!-- <li class="list-group-item">
+              <div class="row">
+                <div class="col-xs-2 col-md-1">
+                  <img src="http://placehold.it/80" class="img-circle img-responsive" alt="" /></div>
+                <div class="col-xs-10 col-md-11">
+                  <div>
+                    <a href="http://bootsnipp.com/BhaumikPatel/snippets/4ldn">Cool Sign Up</a>
+                    <div class="mic-info">
+                      By: <a href="#">Bhaumik Patel</a> on 11 Nov 2013
+                    </div>
+                  </div>
+                  <div class="comment-text">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                    euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+                  </div>
+                  <div class="action">
+                    <button type="button" class="btn btn-primary btn-xs" title="Edit">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                    <button type="button" class="btn btn-success btn-xs" title="Approved">
+                      <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs" title="Delete">
+                      <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+          <!-- <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span
+              class="glyphicon glyphicon-refresh"></span> More</a> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 
+<div class="row">
+  <div class="col-lg-12">
+    <div class="col-lg-3">
+
+
+    </div>
+    <div class="col-lg-9">
+    </div>
+  </div>
+</div> -->
+
+<!-- 
+<table *ngIf="route=='/chat/admin'">
+  <tr>
+    <th>Employee Name</th>
+    <th>Employee Id</th>
+    <th>Employee Date of Birth</th>
+    <th>Employee Role</th>
+    <th>Employee Mail</th>
+    <th>Employee Address</th>
+    <th>Employee PAN number</th>
+    <th>Employee PF number</th>
+  </tr>
+  <tr *ngFor="let d of allUsers">
+    <td>{{d.emp_name}}</td>
+    <td>{{d.emp_id}}</td>
+    <td>{{d.emp_dob}}</td>
+    <td>{{d.emp_role}}</td>
+    <td>{{d.emp_mail}}</td>
+    <td>{{d.emp_address}}</td>
+    <td>{{d.emp_pan_number}}</td>
+    <td>{{d.emp_pf_number}}</td>
+  </tr>
+</table> -->
+
+<!-- <br> -->
+
+<table *ngIf="route =='/chat/chat'">
+  <tr>
+    <th>Name</th>
+    <th>Id</th>
+    <th>Date of Birth</th>
+    <th>Role</th>
+    <th>Mail</th>
+    <th>Address</th>
+    <th>PAN number</th>
+    <th>PF number</th>
+  </tr>
+  <tr *ngFor="let d of user">
+    <td>{{d.emp_name}}</td>
+    <td>{{d.emp_id}}</td>
+    <td>{{d.emp_dob}}</td>
+    <td>{{d.emp_role}}</td>
+    <td>{{d.emp_mail}}</td>
+    <td>{{d.emp_address}}</td>
+    <td>{{d.emp_pan_number}}</td>
+    <td>{{d.emp_pf_number}}</td>
+  </tr>
+</table>
